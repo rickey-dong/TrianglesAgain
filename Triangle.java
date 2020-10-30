@@ -48,6 +48,21 @@ public class Triangle
   }
   public String toString()
   {
-    return "v1(" + this.v1.getX() + ", " + this.v1.getY() + ") v2(" + this.v2.getX() + ", " + this.v2.getY() + ") v3(" + this.v3.getX() + ", " + this.v3.getY() + ")";  
+    return "v1(" + this.v1.getX() + ", " + this.v1.getY() + ") v2(" + this.v2.getX() + ", " + this.v2.getY() + ") v3(" + this.v3.getX() + ", " + this.v3.getY() + ")";
+  }
+  public void setVertex(int index, Point newP)
+  {
+    if (index == 0)
+    {
+      v1 = newP;
+    }
+    else if (index == 1)
+    {
+      v2 = newP;
+    }
+    else if (index == 2)
+    {
+      v3 = newP;
+    }
   }
 }

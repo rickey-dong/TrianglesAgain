@@ -10,5 +10,8 @@ public class TriangleTester
     System.out.println(t1.getArea() + " should be 6.0");
     System.out.println(t1.classify() + " should be scalene");
     System.out.println(t1 + " should be v1(0.0, 0.0) v2(0.0, 3.0) v3(4.0, 0.0)");
+    Point replace = new Point(4.0,3.0);
+    t1.setVertex(0, replace);
+    System.out.println(t1 + " should be v1(4.0, 3.0) v2(0.0, 3.0) v3(4.0, 0.0)");
   }
 }
