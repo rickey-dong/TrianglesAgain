@@ -8,5 +8,6 @@ public class TriangleTester
     Triangle t1 = new Triangle(A, B, C);
     System.out.println(t1.getPerimeter() + " should be 12.0");
     System.out.println(t1.getArea() + " should be 6.0");
+    System.out.println(t1.classify() + " should be scalene");
   }
 }

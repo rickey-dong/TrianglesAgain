@@ -28,4 +28,22 @@ public class Triangle
     double sideC = this.v3.distanceTo(this.v1);
     return Math.sqrt( (semiperimeter) * (semiperimeter - sideA) * (semiperimeter - sideB) * (semiperimeter - sideC) );
   }
+  public String classify()
+  {
+    double sideA = Math.round(this.v1.distanceTo(this.v2) * 10000.0) / 10000.0;
+    double sideB = Math.round(this.v2.distanceTo(this.v3) * 10000.0) / 10000.0;
+    double sideC = Math.round(this.v3.distanceTo(this.v1) * 10000.0) / 10000.0;
+    if (sideA == sideB && sideB == sideC)
+    {
+      return "equilateral";
+    }
+    else if (sideA == sideB || sideA == sideC || sideB == sideC)
+    {
+      return "isosceles";
+    }
+    else
+    {
+      return "scalene";
+    }
+  }
 }
