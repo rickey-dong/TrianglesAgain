@@ -7,5 +7,6 @@ public class TriangleTester
     Point C = new Point(4.0,0.0);
     Triangle t1 = new Triangle(A, B, C);
     System.out.println(t1.getPerimeter() + " should be 12.0");
+    System.out.println(t1.getArea() + " should be 6.0");
   }
 }

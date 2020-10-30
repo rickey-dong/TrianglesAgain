@@ -20,4 +20,12 @@ public class Triangle
   {
     return this.v1.distanceTo(this.v2) + this.v2.distanceTo(this.v3) + this.v3.distanceTo(this.v1);
   }
+  public double getArea()
+  {
+    double semiperimeter = this.getPerimeter() / 2;
+    double sideA = this.v1.distanceTo(this.v2);
+    double sideB = this.v2.distanceTo(this.v3);
+    double sideC = this.v3.distanceTo(this.v1);
+    return Math.sqrt( (semiperimeter) * (semiperimeter - sideA) * (semiperimeter - sideB) * (semiperimeter - sideC) );
+  }
 }
